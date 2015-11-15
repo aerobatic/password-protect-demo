@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>HTTP Basic Auth Demo</title>
-  <meta name="description" content="This demo shows how to use the Aerobatic HTTP Basic Auth plugin">
+  <title>Aerobatic HTTP Auth Demo</title>
+  <meta name="description" content="This demo shows how to use the Aerobatic custom errors plugin">
   <meta name="author" content="Aerobatic">
 
   <!-- Mobile Specific Metas
@@ -19,14 +19,14 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/custom.css">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="js/site.js"></script>
+  <script src="/js/site.js"></script>
 
 </head>
 <body class="code-snippets-visible">
@@ -34,7 +34,7 @@
   <div class="navbar-spacer"></div>
     <nav class="navbar">
       <div class="container">
-        <a href="http://www.aerobatic.com"><img src="images/aerobatic_logo.png"></a>
+        <a href="http://www.aerobatic.com"><img src="/images/aerobatic_logo.png"></a>
       </div>
     </nav>
 
@@ -42,25 +42,17 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <section class="header">
-      <h1 class="title">HTTP Basic Auth Demo</h1>
+      <h1 class="title">Error 401 Unauthorized</h1>
     </section>
 
-    <!-- Why use Skeleton -->
-    <div class="docs-section" id="intro">
-      <p>Sometimes you just need to provide a global basic username/password protection on an app. Often HTTP basic authentication is a “good enough” solution. This plugin lets you secure all or part of your app with a username and password that you will store in environment variables.</p> 
-    </div>
-    
     <!-- Example -->
     <div class="docs-section examples" id="examples">
-      <h6 class="docs-header">Example</h6>
       <div class="row example">
-          <p>Access to this site is restricted to our clients.</p>
-          <p><a class="button button-primary" href="/protected/success.html" role="button">Client Preview</a></p>
-          <p> p.s. Since this is just a demo, the username and password are 'aerobatic'.</p>
-          <p>To implement basic auth in your web app, see the Aerobatic <a href="http://www.aerobatic.com/docs/#sec3">documentation</a>.</p>
+          <p>This basic auth demo also uses the custom errors plugin so you can give your users a soft landing if they don't enter the correct password.</p>
+          <p>See this <a href="http://www.aerobatic.com/blog/custom-error-pages.html" target="_blank">blog post</a> for more information on custom errors. The source code for this HTTP basic auth demo is on <a href="https://bitbucket.org/aerobatic/auth-demo/src" target="_blank">Bitbucket</a>.</p>
+          <p><a class="button button-primary" href="/index.html" role="button">Let's go home</a></p>
       </div>
-    </div>
-  </div>
+  	</div>
 
 
 <!-- End Document
