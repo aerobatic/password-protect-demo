@@ -2,19 +2,19 @@
   "_virtualApp": {
     "router": [
       {
-        "module": "basic-auth",
-        "path": "/protected",
-        "options": {
-          "username": "env:BASIC_AUTH_USERNAME",
-          "password": "env:BASIC_AUTH_PASSWORD"
-        }
-      },
-      {
         "module": "custom-errors",
         "options": {
           "errors": {
             "401": "errors/401.html"
           }
+        }
+      },
+      {
+        "module": "basic-auth",
+        "path": "/protected",
+        "options": {
+          "username": "env:BASIC_AUTH_USERNAME",
+          "password": "env:BASIC_AUTH_PASSWORD"
         }
       },
       {
