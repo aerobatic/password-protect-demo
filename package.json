@@ -9,7 +9,7 @@
     "router": [
       {
         "module": "basic-auth",
-        "path": "/protected",
+        "path": "/protected-standard",
         "options": {
           "username": "$BASIC_AUTH_USERNAME",
           "password": "$BASIC_AUTH_PASSWORD"
@@ -17,7 +17,7 @@
       },
       {
         "module": "basic-auth2",
-        "path": "/protected-enhanced",
+        "path": "/protected-custom",
         "options": {
           "username": "$BASIC_AUTH_USERNAME",
           "password": "$BASIC_AUTH_PASSWORD",
