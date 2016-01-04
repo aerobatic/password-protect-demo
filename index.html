@@ -47,7 +47,8 @@
 
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
-      <p>Sometimes you just need to provide a global basic username/password protection on an app. Often HTTP basic authentication is a “good enough” solution. This plugin lets you secure all or part of your app with a username and password that you will store in environment variables.</p>
+      <p>Sometimes you just need to provide a global basic username/password protection on an app. Often HTTP basic authentication is a “good enough” solution. This plugin lets you secure all or part of your app with a username and password stored in environment variables.</p>
+      <p>We offer two flavors of basic auth: standard and enhanced. With standard basic auth, unauthenticated users are prompted to enter the website username and password in the browser's built-in authorziation dialog. This gets the job done, but it doesn't allow for any customization or branding. Enhanched basic auth, available with all paid plans, allows you to present your website visitors a fully custom login html page.</p>
     </div>
 
     <!-- Example -->
@@ -55,7 +56,10 @@
       <h6 class="docs-header">Example</h6>
       <div class="row example">
           <p>Access to this site is restricted to our clients.</p>
-          <p><a class="button button-primary" href="/protected/success.html" role="button">Client Preview</a></p>
+          <p>
+            <a class="button button-primary" href="/protected/success.html" role="button">Standard auth</a>
+            <a class="button button-primary" href="/protected-enhanced/" role="button">Enhanced auth</a>
+          </p>
           <p> p.s. Since this is just a demo, the username and password are 'aerobatic'.</p>
           <p>To implement basic auth in your web app, see the Aerobatic <a href="http://www.aerobatic.com/docs/http-basic-authentication">documentation</a>.</p>
       </div>
