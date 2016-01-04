@@ -1,12 +1,37 @@
 {
-  "_virtualApp": {
+  "name": "aerobatic-auth-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server . -o -p 9999"
+  },
+  "_aerobatic": {
     "router": [
       {
         "module": "basic-auth",
         "path": "/protected",
         "options": {
-          "username": "env:BASIC_AUTH_USERNAME",
-          "password": "env:BASIC_AUTH_PASSWORD"
+          "username": "$BASIC_AUTH_USERNAME",
+          "password": "$BASIC_AUTH_PASSWORD"
+        }
+      },
+      {
+        "module": "basic-auth2",
+        "path": "/protected-enhanced",
+        "options": {
+          "username": "$BASIC_AUTH_USERNAME",
+          "password": "$BASIC_AUTH_PASSWORD",
+          "loginPage": "login.html"
+        }
+      },
+      {
+        "module": "custom-errors",
+        "options": {
+          "errors": {
+            "401": "error.html",
+            "403": "error.html",
+            "404": "error.html"
+          }
         }
       },
       {

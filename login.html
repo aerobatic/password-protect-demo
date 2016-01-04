@@ -47,21 +47,29 @@
 
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
-      <p>Sometimes you just need to provide a global basic username/password protection on an app. Often HTTP basic authentication is a “good enough” solution. This plugin lets you secure all or part of your app with a username and password that you will store in environment variables.</p>
+      <p>This is a custom Basic Auth login page. You can make this page look like anything you like. Much nicer than the ugly built-in browser login dialog right?</p>
     </div>
 
     <!-- Example -->
     <div class="docs-section examples" id="examples">
       <h6 class="docs-header">Example</h6>
       <div class="row example">
-          <p>Access to this site is restricted to our clients.</p>
-          <p><a class="button button-primary" href="/protected/success.html" role="button">Client Preview</a></p>
-          <p> p.s. Since this is just a demo, the username and password are 'aerobatic'.</p>
-          <p>To implement basic auth in your web app, see the Aerobatic <a href="http://www.aerobatic.com/docs/http-basic-authentication">documentation</a>.</p>
+        <p>Access to this site is restricted to our clients. Since this is just a demo, the username and password are <strong>aerobatic</strong>.</p>
+        <h6 class="error" data-basic-auth-error><strong>Invalid credentials</strong></h6>
+        <form data-basic-auth-form>
+          <label for="username">Username</label>
+          <input class="u-full-width" type="text" placeholder="username" id="username" data-basic-auth-username>
+          <label for="password">Password</label>
+          <input class="u-full-width" type="password" placeholder="password" id="username" data-basic-auth-password>
+          <div>
+            <input class="button-primary" type="submit" value="Submit">
+          </div>
+        </form>
+        <p>You can intentionally try an incorrect password to see error handling in action. After 5 failed logins within a 5 minute period, a 403 Forbidden error page will be returned which you can also customize with the <a href="https://www.aerobatic.com/docs/custom-error-pages">custom-errors plugin</a>.</p>
+        <p>To implement basic auth in your own website, see the Aerobatic <a href="http://www.aerobatic.com/docs/http-basic-authentication">documentation</a>.</p>
       </div>
     </div>
   </div>
-
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
