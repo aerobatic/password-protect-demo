@@ -6,6 +6,7 @@
     "start": "http-server . -o -p 9999"
   },
   "_aerobatic": {
+    "clientConfigVar": "globalCustom",
     "router": [
       {
         "module": "basic-auth",
@@ -37,7 +38,6 @@
       {
         "module": "webpage",
         "options": {
-          "clientConfigVar": "globalCustom"
         }
       }
     ]
