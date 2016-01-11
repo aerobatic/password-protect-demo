@@ -8,7 +8,7 @@
   "_aerobatic": {
     "router": [
       {
-        "module": "basic-auth2",
+        "module": "basic-auth",
         "path": "/protected-standard",
         "options": {
           "username": "$BASIC_AUTH_USERNAME",
@@ -16,7 +16,7 @@
         }
       },
       {
-        "module": "basic-auth2",
+        "module": "basic-auth",
         "path": "/protected-custom",
         "options": {
           "username": "$BASIC_AUTH_USERNAME",
