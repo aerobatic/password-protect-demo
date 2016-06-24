@@ -20,8 +20,16 @@
         "module": "basic-auth",
         "path": "/protected-custom",
         "options": {
-          "username": "$BASIC_AUTH_USERNAME",
-          "password": "$BASIC_AUTH_PASSWORD",
+          "credentials": [
+            {
+              "username": "$BASIC_AUTH_USERNAME",
+              "password": "$BASIC_AUTH_PASSWORD"
+            },
+            {
+              "username": "username1",
+              "password": "password1"
+            }
+          ],
           "loginPage": "login.html"
         }
       },
