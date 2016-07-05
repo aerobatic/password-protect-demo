@@ -52,22 +52,23 @@
 
     <!-- Example -->
     <div class="docs-section examples" id="examples">
-      <h6 class="docs-header">Example</h6>
-      <div class="row example">
-        <p>Access to this site is restricted to our clients. Since this is just a demo, the username and password are <strong>aerobatic</strong>.</p>
-        <h6 class="error" data-basic-auth-error><strong>Invalid credentials</strong></h6>
-        <form data-basic-auth-form>
-          <label for="username">Username</label>
-          <input class="u-full-width" type="text" placeholder="username" data-basic-auth-username>
-          <label for="password">Password</label>
-          <input class="u-full-width" type="password" placeholder="password" data-basic-auth-password>
-          <div>
-            <input class="button-primary" type="submit" value="Submit">
-          </div>
+      <div class="container">
+      <div class="row">
+        <div class="error alert alert-info alert-dismissible col-sm-6 col-sm-offset-3" role="alert" data-basic-auth-error>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <strong>Invalid credentials!</strong>  Please try again.
+        </div>
+        <form method="post" class="form-signin" data-basic-auth-form>
+          <h2 class="form-signin-heading">Please sign-in</h2>
+          <label for="username" class="sr-only">Username</label>
+          <input type="text" id="username" class="form-control" placeholder="Username" required autofocus data-basic-auth-username>
+          <label for="inputPassword" class="sr-only">Password</label>
+          <input type="password" id="inputPassword" class="form-control" placeholder="Password" required data-basic-auth-password>
+          <br />
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </form>
-        <p>You can intentionally try an incorrect password to see error handling in action. After 5 failed logins within a 5 minute period, a 403 Forbidden error page will be returned which you can also customize with the <a href="https://www.aerobatic.com/docs/custom-error-pages">custom-errors plugin</a>.</p>
-        <p>To implement basic auth in your own website, see the Aerobatic <a href="http://www.aerobatic.com/docs/http-basic-authentication">documentation</a>.</p>
       </div>
+    </div> <!-- /container -->
     </div>
   </div>
 
