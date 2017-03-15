@@ -4,50 +4,5 @@
   "private": true,
   "scripts": {
     "start": "http-server . -o -p 9999"
-  },
-  "_aerobatic": {
-    "clientConfigVar": "globalCustom",
-    "router": [
-      {
-        "module": "basic-auth",
-        "path": "/protected-standard",
-        "options": {
-          "username": "$BASIC_AUTH_USERNAME",
-          "password": "$BASIC_AUTH_PASSWORD"
-        }
-      },
-      {
-        "module": "basic-auth",
-        "path": "/protected-custom",
-        "options": {
-          "credentials": [
-            {
-              "username": "$BASIC_AUTH_USERNAME",
-              "password": "$BASIC_AUTH_PASSWORD"
-            },
-            {
-              "username": "username1",
-              "password": "password1"
-            }
-          ],
-          "loginPage": "login.html"
-        }
-      },
-      {
-        "module": "custom-errors",
-        "options": {
-          "errors": {
-            "401": "error.html",
-            "403": "error.html",
-            "404": "error.html"
-          }
-        }
-      },
-      {
-        "module": "webpage",
-        "options": {
-        }
-      }
-    ]
   }
 }
