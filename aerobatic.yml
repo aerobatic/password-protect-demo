@@ -1,0 +1,23 @@
+id: e25a180f-afa1-447a-bbc8-a7c8addc54df
+deploy:
+  ignore: []
+  directory: .
+plugins:
+  - name: basic-auth
+    path: /protected-standard
+    options:
+      username: $BASIC_AUTH_USERNAME
+      password: $BASIC_AUTH_PASSWORD
+  - name: basic-auth
+    path: /protected-custom
+    options:
+      username: $BASIC_AUTH_USERNAME
+      password: $BASIC_AUTH_PASSWORD
+      loginPage: protected-custom/login.html
+  - name: custom-errors
+    options:
+      errors:
+        401: error.html
+        403: error.html
+        404: error.html
+  - name: webpage
