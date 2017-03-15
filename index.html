@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>HTTP Basic Auth Demo</title>
-  <meta name="description" content="This demo shows how to use the Aerobatic HTTP Basic Auth plugin">
+  <title>Aerobatic Password Protect Demo</title>
+  <meta name="description" content="This demo shows how to use the Aerobatic password-protect plugin">
   <meta name="author" content="Aerobatic">
 
   <!-- Mobile Specific Metas
@@ -42,13 +42,15 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <section class="header">
-      <h1 class="title">HTTP Basic Auth Demo</h1>
+      <h1 class="title">Password Protect Demo</h1>
     </section>
 
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
-      <p>Sometimes you just need to provide a global basic username/password protection on an app. Often HTTP basic authentication is a “good enough” solution. This plugin lets you secure all or part of your app with a username and password stored in environment variables.</p>
-      <p>We offer two flavors of basic auth: standard and custom. With standard basic auth, unauthenticated users are prompted to enter the website username and password in the browser's built-in authorziation dialog. This gets the job done, but it doesn't allow for any customization or branding. Custom basic auth, available only for paid plans, allows you to present your website visitors a fully custom login html page.</p>
+      <p>
+        The Aerobatic password-protect plugin is an easy way to add a password form in front of all or parts of your static website.
+        You can either use our standard password form or you can code your own HTML login page. Read the <a href="https://www.aerobatic.com/docs/plugins/password-protect/">full documentation</a> or view the <a href="https://bitbucket.org/aerobatic/password-protect-demo">source code</a>.
+      </p>
     </div>
 
     <!-- Example -->
@@ -57,11 +59,11 @@
       <div class="row example">
           <p>Access to this site is restricted to our clients.</p>
           <p>
-            <a class="button button-primary" href="/protected-standard/" role="button">Standard auth</a>
-            <a class="button button-primary" href="/protected-custom/" role="button">Custom auth</a>
+            <a class="button button-primary" href="/protected-standard/" role="button">Standard form</a>
+            <a class="button button-primary" href="/protected-custom/" role="button">Custom form</a>
           </p>
           <p> p.s. Since this is just a demo, the username and password are 'aerobatic'.</p>
-          <p>To implement basic auth in your web app, see the Aerobatic <a href="http://www.aerobatic.com/docs/http-basic-authentication">documentation</a>.</p>
+          <p>To implement basic auth in your web app, see the Aerobatic <a href="https://www.aerobatic.com/docs/plugins/password-protect/">documentation</a>.</p>
       </div>
     </div>
   </div>

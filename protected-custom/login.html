@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>HTTP Basic Auth Demo</title>
-  <meta name="description" content="This demo shows how to use the Aerobatic HTTP Basic Auth plugin">
+  <title>Aerobatic Password Protect Demo</title>
+  <meta name="description" content="This demo shows how to use the Aerobatic password-protect plugin">
   <meta name="author" content="Aerobatic">
 
   <!-- Mobile Specific Metas
@@ -42,31 +42,35 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <section class="header">
-      <h1 class="title">HTTP Basic Auth Demo</h1>
+      <h1 class="title">Password Protect Demo</h1>
     </section>
 
     <!-- Why use Skeleton -->
     <div class="docs-section" id="intro">
-      <p>This is a custom basic auth login page. You can make this page look like anything you like. Much nicer than the ugly built-in browser login dialog right?</p>
+      <p>This is a custom password-protect login page. You can make this page look like anything you like.</p>
     </div>
 
     <!-- Example -->
     <div class="docs-section examples" id="examples">
       <h6 class="docs-header">Example</h6>
       <div class="row example">
-        <p>Access to this site is restricted to our clients. Since this is just a demo, the username and password are <strong>aerobatic</strong>.</p>
-        <h6 class="error" data-basic-auth-error><strong>Invalid credentials</strong></h6>
-        <form data-basic-auth-form>
-          <label for="username">Username</label>
-          <input class="u-full-width" type="text" placeholder="username" id="username" data-basic-auth-username>
+        <p>Access to this site is restricted to our clients. Since this is just a demo, the password is <strong>aerobatic</strong>.</p>
+
+        <script>
+        if (/fail=1/.test(location.search)) {
+          document.write('<h6 class="error">Incorrect password</h6>');
+        }
+        </script>
+
+        <form method="POST">
           <label for="password">Password</label>
-          <input class="u-full-width" type="password" placeholder="password" id="username" data-basic-auth-password>
+          <input class="u-full-width" type="password" placeholder="password" name="aerobatic-password">
           <div>
             <input class="button-primary" type="submit" value="Submit">
           </div>
         </form>
-        <p>You can intentionally try an incorrect password to see error handling in action. After 5 failed logins within a 5 minute period, a 403 Forbidden error page will be returned which you can also customize with the <a href="https://www.aerobatic.com/docs/custom-error-pages">custom-errors plugin</a>.</p>
-        <p>To implement basic auth in your own website, see the Aerobatic <a href="http://www.aerobatic.com/docs/http-basic-authentication">documentation</a>.</p>
+        <p>You can intentionally try an incorrect password to see error handling in action. After 5 failed logins within a 5 minute period, a 403 Forbidden error page will be returned which you can also customize with the <a href="https://www.aerobatic.com/docs/plugins/custom-errors/">custom-errors plugin</a>.</p>
+        <p>To implement basic auth in your own website, see the Aerobatic <a href="https://www.aerobatic.com/docs/plugins/password-protect/">documentation</a>.</p>
       </div>
     </div>
   </div>

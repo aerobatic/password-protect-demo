@@ -5,8 +5,8 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>HTTP Basic Auth Demo</title>
-  <meta name="description" content="This demo shows how to use the Aerobatic HTTP Basic Auth plugin">
+  <title>Aerobatic Password Protect Demo</title>
+  <meta name="description" content="This demo shows how to use the Aerobatic password-protect plugin">
   <meta name="author" content="Aerobatic">
 
   <!-- Mobile Specific Metas
@@ -54,7 +54,10 @@
     </div>
 
     <p>
-      <a class="button button-primary" href="/protected-custom" role="button" data-basic-auth-logout>Logout</a>
+      <form method="POST">
+        <input type="hidden" name="aerobatic-logout" value="1" />
+        <button class="button button-primary" role="button" type="submit">Log out</button>
+      </form>
     </p>
   </div>
 
