@@ -12,6 +12,9 @@ plugins:
     options:
       password: $PASSWORD
       loginPage: protected-custom/login.html
+  - name: keyword-search
+    path: /search
+    method: get
   - name: custom-errors
     options:
       errors:
@@ -19,3 +22,6 @@ plugins:
         403: error.html
         404: error.html
   - name: webpage
+
+scanner:
+  keywordSearch: {}
