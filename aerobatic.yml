@@ -12,6 +12,11 @@ plugins:
     options:
       password: $PASSWORD
       loginPage: protected-custom/login.html
+  - name: password-protect
+    path: /protected-username
+    options:
+      username: aerobatic
+      password: $PASSWORD
   - name: keyword-search
     path: /search
     method: get
