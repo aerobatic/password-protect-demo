@@ -7,11 +7,15 @@ plugins:
     path: /protected-standard
     options:
       password: $PASSWORD
+      cookieExpiresMinutes: 20160
+
   - name: password-protect
     path: /protected-custom
     options:
       password: $PASSWORD
       loginPage: protected-custom/login.html
+      cookieExpiresMinutes: 20160
+      
   - name: password-protect
     path: /protected-username
     options:
