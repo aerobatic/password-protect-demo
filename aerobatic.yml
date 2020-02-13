@@ -1,21 +1,21 @@
-id: 1edd6be2-8f56-4fc9-b4ed-406693f79b10
+id: 38c97c27-427d-4192-9e55-1505ce6b1ce1
 deploy:
   ignore: []
   directory: .
 plugins:
   - name: password-protect
     path: /protected-standard
+    stages:
+      - production
     options:
       password: $PASSWORD
       cookieExpiresMinutes: 20160
-
   - name: password-protect
     path: /protected-custom
     options:
       password: $PASSWORD
       loginPage: protected-custom/login.html
       cookieExpiresMinutes: 20160
-      
   - name: password-protect
     path: /protected-username
     options:
@@ -27,10 +27,9 @@ plugins:
   - name: custom-errors
     options:
       errors:
-        400: error.html
-        403: error.html
-        404: error.html
+        '400': error.html
+        '403': error.html
+        '404': error.html
   - name: webpage
-
 scanner:
   keywordSearch: {}
